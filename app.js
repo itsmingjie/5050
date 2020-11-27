@@ -48,7 +48,7 @@ app.get("/result", async (req, res) => {
     })
 
     res.render(__dirname + "/views/results.html", {
-        p: x / n,
+        p: (x / n * 100).toFixed(2),
         n
     })
 })
