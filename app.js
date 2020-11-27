@@ -53,7 +53,7 @@ app.get("/result", async (req, res) => {
     })
 })
 
-app.post("/submit", async (req, res) => {
+app.post("/submit", guessedMiddleware, async (req, res) => {
   const guess = req.body.value;
   const email = req.body.email;
 
