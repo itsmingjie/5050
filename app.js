@@ -40,8 +40,10 @@ app.get("/result", async (req, res) => {
 
     let n = 0
     let x = 0
+    let a = [["Guess"]]
 
     allData.forEach((d) => {
+        a.push([d.fields.guess])
         if (d.fields.guess <= 50)
             x++
         n++
@@ -49,7 +51,8 @@ app.get("/result", async (req, res) => {
 
     res.render(__dirname + "/views/results.html", {
         p: (x / n * 100).toFixed(2),
-        n
+        n,
+        a: JSON.stringify(a)
     })
 })
 
