@@ -42,12 +42,13 @@
         <div class="row">
             <div style="margin-top: 15vh;">
                 <div class="one-half column">
-                    <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 800;">Current Result: <%= p %></h1>
-                    <p style="margin-bottom: 1rem;">That means about <%= p %>% responders entered a number less than or equal to 50.</p>
+                    <h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: 800;">Current Result: <%= p %> <%if (p < 50) { %>(Wow!)<% } %></h1>
+                    <p style="margin-bottom: 1rem;">That means about <%= p %>% of responders entered a number less than or equal to 50...</p>
                     <p style="margin-bottom: 1rem;">There are currently <%= n %> responses in the pool.</p>
+                    <p style="margin-bottom: 1rem;">Thanks for participating! 💖</p>
                     <br />
-                    <p style="margin-bottom: 1rem;">Made by <a href="https://mingjie.dev">Mingjie Jiang</a>, idea by Julie Steele uwu</p>
-                    <p><a href="https://github.com/itsmingjie/5050">Open Source</a></p>
+                    <p style="margin-bottom: 1rem; font-weight: 600;">✨ Made by <a href="https://mingjie.dev" target="_blank" rel="noopen">Mingjie Jiang</a>, idea by <a href="https://github.com/JShermanSteele" target="_blank" rel="noopen">Julie Steele</a> ✨</p>
+                    <p><a href="https://github.com/itsmingjie/5050" target="_blank" rel="noopen">Open Source</a></p>
                 </div>
                 <div class="one-half column">
                     <p id="histogram-msg">Please visit this page on a larger screen to see the histogram.</p>
