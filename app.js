@@ -5,7 +5,7 @@ const path = require("path");
 const AirtablePlus = require("airtable-plus");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
-const minifyHTML = require('express-minify-html')
+const minifyHTML = require('express-minify-html-2')
 const compression = require('compression')
 
 const airtable = new AirtablePlus({
